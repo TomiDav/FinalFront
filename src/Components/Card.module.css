@@ -1,0 +1,73 @@
+.card {
+	box-sizing: border-box;
+	width: 19rem;
+	height: 25rem;
+	background: rgba(217, 217, 217, 0.58);
+	border: 1px solid #4da8cf;
+	box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+	backdrop-filter: blur(6px);
+	border-radius: 17px;
+	text-align: center;
+	transition: all 0.2s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	user-select: none;
+	font-weight: bolder;
+	color: black;
+	flex-direction: column;
+	margin-bottom: 2rem;
+}
+
+.card_body{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.card_title{
+	color: black;
+}
+  
+.card_phone{
+	color: black;
+}
+
+.shadow {
+	box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
+						0 0  0 2px rgb(190, 190, 190),
+						0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+.card:hover {
+	border: 1px solid #66bde6;
+	transform: scale(1.05);
+	box-shadow: 0px 0px 51px rgba(0, 0, 0, 0.44)
+}
+
+.img_od{
+	width: 14rem
+}
+
+.favorite{
+	z-index: 999;
+}
+
+/* Dark Mode */
+
+:global(.dark) .card{
+	box-shadow: 12px 17px 51px rgba(255, 255, 255, 0.22);
+}
+
+:global(.dark) .shadow {
+	box-shadow: inset 0 -3em 3em rgba(255, 255, 255, 0.1),
+						0 0  0 2px rgb(65, 65, 65),
+						0.3em 0.3em 1em rgba(255, 255, 255, 0.3);
+}
+
+:global(.dark) .card:hover {
+	border: 1px solid #66bde6;
+	transform: scale(1.05);
+	box-shadow: 0px 0px 51px rgba(255, 255, 255, 0.44)
+}

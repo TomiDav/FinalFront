@@ -1,0 +1,108 @@
+.header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: #66bde6;
+	padding: 1rem;
+	transition: all 0.2s;
+	position: relative;
+}
+
+.buttons{
+  display: flex;
+  width: 50rem;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: .5rem;
+}
+
+.link{
+  text-decoration: none;
+  background-color: #ffffff00;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: 1px 1px 9px 0px rgba(0, 0, 0, 0.625);
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.536);
+    -moz-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.562);
+  box-sizing: border-box;
+  color: #3c4043;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  letter-spacing: .25px;
+  line-height: normal;
+  padding: 11px 24px;
+  transition: all 0.2s;
+}
+
+.link:hover{
+  background: #F6F9FE;
+}
+
+link:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+  border: 2px solid #4285f4;
+}
+
+.change {
+  height: 2rem;
+  width: 10rem;
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid #252525;
+  overflow: hidden;
+  border-radius: 30px;
+  color: #333;
+  transition: all 0.2s;
+}
+
+.btn_txt {
+  z-index: 1;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.change:hover {
+  box-shadow: 1px 1px 200px #252525;
+  color: #fff;
+  border: none;
+}
+
+/* Dark Mode */
+:global(.dark) .change{
+	background: rgb(0, 0, 0);
+	color: white;
+  border: 2px solid #66bde6;
+
+}
+
+:global(.dark) .change:hover {
+  box-shadow: 1px 1px 200px #ffffff;
+  color: #fff;
+  border: none;
+}
+
+:global(.dark) .header{
+	background: rgb(0, 0, 0);
+	color: white
+}
+
+:global(.dark) .link{
+	color: white;
+  box-shadow: 1px 1px 9px 0px rgba(255, 255, 255, 0.625);
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(255, 255, 255, 0.536);
+    -moz-box-shadow: 0px 0px 9px 0px rgba(255, 255, 255, 0.562);
+}
+
+:global(.dark) .link:hover{
+  background: #66bde6;
+}
+
+link:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+  border: 2px solid #4285f4;
+}
