@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Success from "./Success";
 import Error from "./Error";
+import styles from './Form.module.css'
 
 function Form(props) {
   const [nombre, setNombre] = useState("");
@@ -25,24 +26,25 @@ function Form(props) {
 
   return (
     <>
-      <form onSubmit={handeSubmit}>
-        <label htmlFor="nombre">Nombre: </label>
+      <form className={styles.form} onSubmit={handeSubmit}>
         <input
+          placeholder="Ingrese su nombre"
+          className={styles.input}
           type="text"
           id="nombre"
           required
           onChange={onChangeNombre}
         />
         
-        <label htmlFor="email">Email: </label>
-        <input 
+        <input
+          placeholder="Ingrese su correo electrónico"
+          className={styles.input}
           type="email" 
           id="email"
           required
         />
 
-
-        <button type="submit">Enviar</button>
+        <button className={styles.button} type="submit">Enviar</button>
       </form>
 
       {error && <Error error={error}/>}

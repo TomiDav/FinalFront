@@ -29,7 +29,7 @@ const Home = () => {
 					{data.map(
 						(dentista) =>{
     						return(
-                <Link className={styles.link} key={dentista.id} to={`dentist/${dentista.id}`}>
+                <Link className={styles.link} key={dentista.id} to={`/dentist/${dentista.id}`}>
 	 							  <Card name={dentista.name} phone={dentista.phone} id={dentista.id}/>
 							  </Link>
               )

@@ -1,8 +1,9 @@
 import React from 'react'
+import styles from './Error.module.css'
 
 function Error(props) {
   return (
-    <div>{props.error}</div>
+    <h3 className={styles.error}>{props.error}</h3>
   )
 }
 

@@ -18,6 +18,7 @@ function App() {
           <Route path="/dentist/:id" element={<Dentist />}/>
           <Route path="/contact" element={<Contact />}/>
           <Route path="/favs" element={<Favs />}/>
+          <Route path="/home" element={<Home />}/>
           <Route path="*" element={<Home />}/>
         </Routes>
         <Footer/>

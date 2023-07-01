@@ -1,12 +1,13 @@
 .header {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	background: #66bde6;
-	padding: 1rem;
-	transition: all 0.2s;
-	position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #66bde6;
+  padding: 1rem;
+  transition: all 0.2s;
+  position: relative;
+  width: 100%;
 }
 
 .buttons{
@@ -71,7 +72,14 @@ link:active {
   border: none;
 }
 
+link:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+  border: 2px solid #4285f4;
+}
+
 /* Dark Mode */
+
 :global(.dark) .change{
 	background: rgb(0, 0, 0);
 	color: white;
@@ -99,10 +107,4 @@ link:active {
 
 :global(.dark) .link:hover{
   background: #66bde6;
-}
-
-link:active {
-  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
-  outline: none;
-  border: 2px solid #4285f4;
 }

@@ -1,9 +1,9 @@
 import React from 'react'
-
-function Succes(props) {
+import styles from './Success.module.css'
+function Success(props) {
   return (
-    <div>Gracias {props.nombre}, te contactaremos cuando antes vía mail</div>
+    <h3 className={styles.success}>Gracias {props.nombre}, te contactaremos cuando antes vía mail</h3>
   )
 }
 
-export default Succes
+export default Success

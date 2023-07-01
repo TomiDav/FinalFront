@@ -8,7 +8,6 @@ const Favs = () => {
   const [favoritos, setFavoritos] = useState(JSON.parse(localStorage.getItem("favoritos")))
   return (
     <>
-      <h1>Dentistas Favoritos</h1>
       <div className={styles.container}>
         {favoritos.length > 0 ? (
           favoritos.map((favorito) => (

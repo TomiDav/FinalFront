@@ -2,7 +2,8 @@ import React from 'react'
 import styles from './Infocard.module.css'
 
 function Infocard(props) {
-    const {name, email, phone, website} = props
+  const {name, email, phone, website} = props
+
   return (
     <div className={styles.infocard}>
       <h2>Nombre: {name}</h2>

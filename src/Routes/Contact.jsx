@@ -1,16 +1,16 @@
 import React from 'react'
 import Form from '../Components/Form'
-import Header from '../Components/Header'
-
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
+import styles from './Contact.module.css'
 
 const Contact = () => {
   return (
     <>
-    <div>
-      <h2>¿Quiere saber más?</h2>
-      <p>Envianos tus datos y nos pondremos en contacto</p>
-      <Form/>
+    <div className={styles.container}>
+      <div className={styles.form_container}>
+        <span className={styles.title}>¿Quiere saber más?</span>
+        <p className={styles.content}>Envianos tus datos y nos pondremos en contacto</p>
+        <Form/>
+      </div>
     </div>
     </>
   )
