@@ -1,17 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Card from "../Components/Card";
 import Header from "../Components/Header";
-
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
+import { Link } from "react-router-dom";
+import styles from './Favs.module.css'
 
 const Favs = () => {
-
+  const [favoritos, setFavoritos] = useState(JSON.parse(localStorage.getItem("favoritos")))
   return (
     <>
-      <h1>Dentists Favs</h1>
-      <div className="card-grid">
-        {/* este componente debe consumir los destacados del localStorage */}
-        {/* Deberan renderizar una Card por cada uno de ellos */}
+      <h1>Dentistas Favoritos</h1>
+      <div className={styles.container}>
+        {favoritos.length > 0 ? (
+          favoritos.map((favorito) => (
+            <Link className={styles.link} key={favorito.id} to={`/dentist/${favorito.id}`}>
+              <Card name={favorito.name} phone={favorito.phone} id={favorito.id} />
+            </Link>
+          ))
+        ) : (
+          <h3>No hay dentistas favoritos</h3>
+        )}
       </div>
     </>
   );

@@ -18,7 +18,9 @@
 	flex-direction: column;
 	margin-bottom: 2rem;
 }
-
+.heart{
+	width: 3rem;
+}
 .card_body{
 	display: flex;
 	justify-content: center;

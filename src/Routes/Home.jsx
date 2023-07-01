@@ -28,9 +28,11 @@ const Home = () => {
 				<div className={styles.container}>
 					{data.map(
 						(dentista) =>{
-    						return(<Link className={styles.link} key={dentista.id} to={`dentist/${dentista.id}`}>
-	 							<Card name={dentista.name} phone={dentista.phone} id={dentista.id}/>
-							</Link>)
+    						return(
+                <Link className={styles.link} key={dentista.id} to={`dentist/${dentista.id}`}>
+	 							  <Card name={dentista.name} phone={dentista.phone} id={dentista.id}/>
+							  </Link>
+              )
 						}
 					)}
 				</div>
